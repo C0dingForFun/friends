@@ -2,7 +2,7 @@
     <h1>Gaming Consoles</h1>
     <card-comp v-for="consoles in displayConsoles()" :key="consoles">
          <template #consoles>
-           <h2>{{consoles}}</h2> 
+           <h3>{{consoles}}</h3> 
         </template>
     </card-comp>
 </template>
