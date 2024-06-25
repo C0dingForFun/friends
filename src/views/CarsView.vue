@@ -2,7 +2,7 @@
      <h1>Cars</h1>
     <card-comp v-for="car in displayCars()" :key="car">
          <template #cars>
-            {{car}}
+            <h3>{{car}}</h3> 
         </template>
     </card-comp>
 </template>
@@ -16,9 +16,6 @@ export default {
         displayCars(){
             return this.$store.state.cars
         },
-        displayConsoles(){
-            return this.$store.state.gaming_consoles
-        }
     },
     computed:{
         getItems(){
