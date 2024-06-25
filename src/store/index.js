@@ -21,9 +21,10 @@ export default createStore({
   },
   actions: {
     async getItems({commit}){
+      // This gets the data and converts it, you don't have you use 'fetchedItems.json()'
+      // let fetchedItems = await axios.get('https://c0dingforfun.github.io/friends_items/data/dejavue.json') 
       let fetchedItems = await fetch('https://c0dingforfun.github.io/friends_items/data/dejavue.json')
       let items = await fetchedItems.json()
-      console.log(items);
       let {cars,gaming_consoles,friends} = items
       commit('setCars', cars)  
       commit('setGaming_Consoles', gaming_consoles)  
