@@ -21,7 +21,7 @@ export default createStore({
   },
   actions: {
     async getItems({commit}){
-      // This gets the data and converts it, you don't have you use 'fetchedItems.json()'
+      // This gets the data and converts it, you don't have you use 'fetchedItems.json(); it must be imported in index.js before using it'
       // let fetchedItems = await axios.get('https://c0dingforfun.github.io/friends_items/data/dejavue.json') 
       let fetchedItems = await fetch('https://c0dingforfun.github.io/friends_items/data/dejavue.json')
       let items = await fetchedItems.json()

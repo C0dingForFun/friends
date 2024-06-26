@@ -1,8 +1,14 @@
 <template lang="">
      <h1>Cars</h1>
-    <card-comp v-for="car in displayCars()" :key="car">
-         <template #cars>
-            <h3>{{car}}</h3> 
+    <card-comp v-for="car in displayCars()" :key="car" >
+         <template #cars >
+            <div id="card">
+                <h3> Make: {{car.make}}</h3> 
+                <h3>Model: {{car.model}}</h3> 
+                <h3>Year: {{car.year}}</h3> 
+                <h3>Color: {{car.color}}</h3> 
+                <h3>Price: {{car.price}}</h3> 
+            </div>
         </template>
     </card-comp>
 </template>
@@ -27,6 +33,9 @@ export default {
     }
 }
 </script>
-<style lang="">
-    
+<style scoped>
+    #card{
+        margin:1em;
+        border:solid 2px black;
+    }
 </style>

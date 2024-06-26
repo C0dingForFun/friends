@@ -2,7 +2,14 @@
     <h1>Gaming Consoles</h1>
     <card-comp v-for="consoles in displayConsoles()" :key="consoles">
          <template #consoles>
-           <h3>{{consoles}}</h3> 
+            <div id="card">
+                <h3>Name: {{consoles.name}}</h3> 
+                <h3>Manufacturer: {{consoles.manufacturer}}</h3> 
+                <h3>Release Year: {{consoles.release_year}}</h3> 
+                <h3>Storage: {{consoles.storage}}</h3> 
+                <h3>Price: {{consoles.price}}</h3> 
+                <h3>Best Selling Game: {{consoles.best_selling_game}}</h3> 
+            </div>
         </template>
     </card-comp>
 </template>
@@ -27,6 +34,9 @@ export default {
     }
 }
 </script>
-<style lang="">
-    
+<style scoped>
+    #card{
+        margin:1em;
+        border:solid 2px black;
+    }
 </style>
